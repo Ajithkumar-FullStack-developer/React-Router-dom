@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import All from "./pages/All";
-import fullStackDevelopment from "./pages/fullstackdevelopment";
+import fullStackDevelopment from "./pages/fullStackDevelopment";
 import Datascience from "./pages/Datascience";
 import cyberSecurity from "./pages/CyberSecurity";
 import Career from "./pages/Career";
