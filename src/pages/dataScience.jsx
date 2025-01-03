@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 
 
-export default function datascience() {
+export default function dataScience() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
