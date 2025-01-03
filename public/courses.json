@@ -1,0 +1,77 @@
+{
+    "courses":[
+        {
+            "id": 1,
+            "title": "MERN Stack Development",
+            "course": "Full Stack Development",
+            "studying period": "6 month",
+            "batch": "1",
+            "image": "../assets/fullStack1.jpg"
+        },
+        {
+            "id": 2,
+            "title":"MEAM Stack Development",
+            "course": "Full Stack Development",
+            "studying period": "3 month",
+            "batch": "3",
+            "image": "/assets/fullStack2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Angular or Ruby on Rails",
+            "course": "Full Stack Development",
+            "studying period": "6 month",
+            "batch": "8",
+            "image": "/assets/fullStack3.jpg"
+        },
+        {           
+            "id": 4,
+            "title": "Machine learning",
+            "course": "Data Science",
+            "studying period": "5 month",
+            "batch": "3",
+            "image": "/assets/data1.jpg"
+        },
+        {           
+            "id": 5,
+            "title": "Data visualization",
+            "course": "Data Science",
+            "studying period": "6 month",
+            "batch": "1",
+            "image": "/assets/data2.jpg"
+        },
+        {           
+            "id": 6,
+            "title": "Deep learning",
+            "course": "Data Science",
+            "studying period": "12 month",
+            "batch": "2",
+            "image": "/assets/data3.jpg"
+        },
+        {           
+            "id": 7,
+            "title": "Network security",
+            "course": "Cyber Security",
+            "studying period": "3 month",
+            "batch": "7",
+            "image": "/assets/cyber1.jpg"
+        },
+        {           
+            "id": 8,
+            "title": "Cloud security",
+            "course": "Cyber Security",
+            "studying period": "6 month",
+            "batch": "6",
+            "image": "/assets/cyber2.jpg"
+        },
+        {           
+            "id": 9,
+            "title": "Application security",
+            "course": "Cyber Security",
+            "studying period": "12 month",
+            "batch": "8",
+            "image": "/assets/cyber3.jpg"
+        }
+
+    ]
+}
