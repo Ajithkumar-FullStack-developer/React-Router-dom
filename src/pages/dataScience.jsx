@@ -8,8 +8,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 
-
-export default function dataScience() {
+export default function DataScience() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
@@ -28,12 +27,12 @@ export default function dataScience() {
   }, []);
 
   return (
-    <Grid2 container spacing={2} direction="row" wrap="nowrap" mt={5} justifyContent={'center'}>
+    <Grid2 container spacing={2} mt={5} justifyContent="center">
       {courses.map((course) => (
-        <Grid2 item key={course.id}>
+        <Grid2 item xs={12} sm={6} md={4} lg={3} key={course.id}>
           <Card sx={{ maxWidth: 345 }}>
             <CardContent>
-              <Typography gutterBottom variant='h4'>
+              <Typography gutterBottom variant="h4">
                 {course.title}
               </Typography>
             </CardContent>
@@ -41,7 +40,6 @@ export default function dataScience() {
               component="img"
               alt={`${course.course} image`}
               height="340"
-              width="300"
               image={course.image} // Fallback image
             />
             <CardContent>
@@ -49,7 +47,7 @@ export default function dataScience() {
                 {course.course}
               </Typography>
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                Batch {course.batch} | {course["studying period"]}
+                Batch {course.batch} | {course['studying period']}
               </Typography>
               <Button
                 component={Link}

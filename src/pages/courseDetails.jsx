@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Box, Button, Typography } from '@mui/material';
 
-const courseDetails = () => {
+const CourseDetails = () => {
   const { courseId } = useParams(); // Correct capitalization
   const [course, setCourse] = useState(null);
 
@@ -25,31 +26,65 @@ const courseDetails = () => {
   }
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-      <h1>{course.title}</h1>
-      <img
-        src={course.image || '/assets/default-image.jpg'}
-        alt={`${course.title} image`}
-        style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-      />
-      <p><strong>Course:</strong> {course.course}</p>
-      <p><strong>Study Period:</strong> {course['studying period']}</p>
-      <p><strong>Batch:</strong> {course.batch}</p>
-      <button
-        style={{
+    <Box
+      sx={{
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: 2,
+        textAlign: 'center',
+        '@media (max-width: 600px)': {
+          padding: 1,
+        },
+      }}
+    >
+      <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
+        {course.title}
+      </Typography>
+      <Box
+        sx={{
+          mb: 3,
+          '@media (max-width: 600px)': {
+            maxWidth: '100%',
+          },
+        }}
+      >
+        <img
+          src={course.image || '/assets/default-image.jpg'}
+          alt={`${course.title} image`}
+          style={{
+            width: '100%',
+            height: 'auto',
+            borderRadius: '8px',
+          }}
+        />
+      </Box>
+      <Typography variant="h6" sx={{ mb: 1 }}>
+        <strong>Course:</strong> {course.course}
+      </Typography>
+      <Typography variant="h6" sx={{ mb: 1 }}>
+        <strong>Study Period:</strong> {course['studying period']}
+      </Typography>
+      <Typography variant="h6" sx={{ mb: 2 }}>
+        <strong>Batch:</strong> {course.batch}
+      </Typography>
+      <Button
+        variant="contained"
+        color="primary"
+        sx={{
           padding: '10px 20px',
-          backgroundColor: '#1976d2',
-          color: '#fff',
-          border: 'none',
           borderRadius: '5px',
-          cursor: 'pointer',
+          fontSize: '16px',
+          '@media (max-width: 600px)': {
+            width: '100%', // Full-width on small screens
+            padding: '12px 0',
+          },
         }}
         onClick={() => alert('Enrollment feature coming soon!')}
       >
         Enroll Now
-      </button>
-    </div>
+      </Button>
+    </Box>
   );
 };
 
-export default courseDetails;
+export default CourseDetails;

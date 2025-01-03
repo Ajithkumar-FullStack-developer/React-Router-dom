@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-export default function cyberSecurity() {
+export default function CyberSecurity() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,6 @@ export default function cyberSecurity() {
         return response.json();
       })
       .then((data) => {
-        // Filter courses for "Full Stack Development"
         const cyberSecurityCourses = data.courses.filter((course) => course.course === 'Cyber Security');
         setCourses(cyberSecurityCourses);
       })
@@ -28,12 +27,12 @@ export default function cyberSecurity() {
   }, []);
 
   return (
-    <Grid2 container spacing={2} direction="row" wrap="nowrap" mt={5} justifyContent={'center'}>
+    <Grid2 container spacing={2} mt={5} justifyContent="center">
       {courses.map((course) => (
-        <Grid2 item key={course.id}>
+        <Grid2 item xs={12} sm={6} md={4} lg={3} key={course.id}>
           <Card sx={{ maxWidth: 345 }}>
-          <CardContent>
-              <Typography gutterBottom variant='h4'>
+            <CardContent>
+              <Typography gutterBottom variant="h4">
                 {course.title}
               </Typography>
             </CardContent>
@@ -41,7 +40,6 @@ export default function cyberSecurity() {
               component="img"
               alt={`${course.course} image`}
               height="340"
-              width="300"
               image={course.image} // Fallback image
             />
             <CardContent>
@@ -49,7 +47,7 @@ export default function cyberSecurity() {
                 {course.course}
               </Typography>
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                Batch {course.batch} | {course["studying period"]}
+                Batch {course.batch} | {course['studying period']}
               </Typography>
               <Button
                 component={Link}
